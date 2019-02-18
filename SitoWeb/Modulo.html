@@ -1,23 +1,74 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+  <title>Modulo</title>
+  <meta charset="utf-8">
+ 
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 </head>
 <body>
-    <form action=Prenota.jsp>
-        Cognome:
-        <input type=text name=cognome ><br>
-        CLASSE:
-        <select name=classe>
-            <option value=1Einf>1Einf</option>
-            <option value=2Einf>2Einf</option>
-            <option value=3Einf>3Einf</option>
-            <option value=4Einf>4Einf</option>
-            <option value=5Einf>5Einf</option>
-        </select>
-        <input type="radio" name="compiti" value="y" checked> Sì
-        <input type="radio" name="compiti" value="n"> No<br>
-        <input type=submit value=INVIA>
-        </form>
+
+<div class="container">
+  <form action="/Prenota.jsp">
+    <div class="form-group">
+      <label for="cognome">Cognome</label>
+      <input type="text"  name="cognome">
+    </div>
+    <div class="form-group">
+      <label >Classe:</label>
+      <select name="classe">
+        <option value=1Einf>1Einf</option>
+        <option value 2Einf>2Einf</option>
+        <option value=3Einf>3Einf</option>
+        <option value=4Einf>4Einf</option>
+        <option value=5Einf>5Einf</option>
+      </select>
+     </div>
+     Compiti:
+     <label class="radio-inline">
+      <input type="radio" name="compiti" value="si"> Si'
+    </label>
+    <label class="radio-inline">
+      <input type="radio" name="compiti" value="no"> No
+    </label>
+    <br>Docenti:
+    <div class="checkbox">
+      <label><input type="checkbox" name="docente" value="Spadoni">Spadoni</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="docente" value="Giraldi">Giraldi</label>
+    </div>
+    <div class="checkbox disabled">
+      <label><input type="checkbox"name="docente" value="Bellocco">Bellocco</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox"name="docente" value="Apicella">Apicella</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="docente" value="Titze">Titze</label>
+    </div>
+    <div class="checkbox disabled">
+      <label><input type="checkbox" name="docente" value="Malizzia">Malizzia</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="docente" value="Invernizzi">Invernizzi</label>
+    </div>
+    <div class="checkbox">
+      <label><input type="checkbox" name="docente" value="Arcostanzo">Arcostanzo</label>
+    </div>
+    <div class="checkbox disabled">
+      <label><input type="checkbox" name="docente" value="Carrara">Carrara</label>
+    </div>
+    <button type="submit" >Invio</button>
+  </form>
+</div>
+
 </body>
 </html>
+
+
+
+
+
+

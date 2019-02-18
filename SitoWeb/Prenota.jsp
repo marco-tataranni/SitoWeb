@@ -9,8 +9,10 @@
 <body>
     <%
    
-        
+            String[] Docenti;
             String message=null;
+            String message1="";
+            String message2="";
       
               
                  String Cognome = request.getParameter("cognome"); 
@@ -23,13 +25,14 @@
                  else
                  {
                     
-                     message =("Benvenuto "+ Cognome+" ha prenotato un colloquio per parlare di un alunno della classe "+Classe);
-                     if (Compiti=="y")
+                     message =("Benvenuto "+ Cognome+" Ha prenotato un colloquio. ");
+                     message1="Classe: "+Classe;
+                     if (Compiti=="si")
                      {
-                         message=(message+" e hai deciso di vedere i compiti");
-                     }else if (Compiti=="n")
+                         message2="Ha deciso di vedere i compiti";
+                     }else if (Compiti =="no")
                      {
-                         message+=" e hai deciso di non vedere i compiti ";
+                         message2="Ha deciso di non vedere i compiti ";
                      }
                      
                      
@@ -40,5 +43,27 @@
         
     %>
    <h1><%= message %></h1>
+   <h5><%= message1 %></h5>
+   <h5>Con i docenti:</h5>
+    <%
+        Docenti = request.getParameterValues("docente");
+       if (Docenti != null) 
+       {
+          for (int i = 0; i < Docenti.length; i++) 
+          {
+    %>
+
+             <h5><%= Docenti[i] %></h5>
+    <%
+          }
+       }
+       else{
+    %>
+        <p>Nessuno</p>
+    <%
+    
+       }
+    %>
+    <h5>E <%= message2 + Compiti %></h5>
 </body>
 </html>
